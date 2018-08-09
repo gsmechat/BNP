@@ -1,0 +1,20 @@
+Page Index:
+
+- Video de présentation de bnp (Juste avant le footer)
+
+Footer:
+
+- Ajout d'icone reseaux sociaux
+- Section "Abonnez vous!"
+
+Page Personnel:
+
+- Avancement de demande relatif au produit proposé par le CE
+
+Page administration: (Page accessible depuis l'url "administration.html" ou depuis la page index dans onglet mon compte)
+
+- Liste information du personnel
+- Liste des demandes du personnel
+- "Cliquez pour voir la suite" ouverture du tableau en fondu
+- Affichage avec effet de l'image utilisateur en fondu
+- Possibilité de déplacer les "blocs" grace a l'icone en forme de croix

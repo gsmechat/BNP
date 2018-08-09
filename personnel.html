@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>BNP</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"> <img id="no_filter" src="img/bnp.png"/>
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">BNP </a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <div class="navbar-form navbar-left co">
+                            <a href="#?w=500" rel="popup_name" class="btn btn-default poplight">Connexion</a>
+                        </div>
+                        <div class="navbar-form navbar-left deconnect" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                            <button type="submit" class="btn btn-default">Recherche</button>
+                        </div>
+                        <li class="deconnect"><a href="#">Notification <span class="badge">14</span></a></li>
+                        <li class="deconnect off"><a href="index.html">Deconnexion</a></li>
+                        <li class="deconnect dropdown compte">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mon compte <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="personnel.html#info">Information</a></li>
+                                <li><a href="personnel.html#droit">Ayant droits</a></li>
+                                <li><a href="personnel.html#rib">RIB</a></li>
+                                <li role="separator" class="divider"></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </nav>
+</header>
+    <div id="popup_name" id="fade" class="popup_block">
+        <center><h2>Connexion</h2></center><br>
+        <img id="no_filter" class="img-responsive" src="img/bnp-pop.jpg">
+        <input type="text" class="form-control" placeholder="Identifiant"><br>
+        <input type="text" class="form-control" placeholder="Mot de passe"><br>
+        <button type="submit" class="pull-right btn btn-default ok">Connexion</button>
+    </div>
+<div class="container">
+    <div class="row">
+        <hr><h4 id="info">INFORMATION PERSONNEL</h4><hr>
+        <div class="col-lg-4">
+            <img class="img-responsive" src="img/visage.jpg" id="no_filter">
+            <img class="img-responsive" id="no_filter" src="img/bnp-logo.png">
+        </div>
+        <div class="col-lg-8">
+            <form class="form1" action="#">
+                <div class="row clearfix">
+                    <div class="col-md-12 column">
+                        <table class="table table-bordered table-hover" id="tab1">
+                            <thead>
+                                <tr >
+                                    <th class="text-center">
+                                        Nom
+                                    </th>
+                                    <td>
+                                        <input type="text" name='nom0' placeholder='Nom' value="Dupont" id="nom" class="form-control" disabled/>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr id='add0'>
+                                    <th class="text-center">
+                                        Prenom
+                                    </th>
+                                    <td>
+                                        <input type="text" name='prenom0' placeholder='Prenom' value="Eric" id="prenom" class="form-control" disabled/>
+                                    </td>
+                                </tr>
+                                <tr id='add1'>
+                                    <th class="text-center">
+                                        Adresse
+                                    </th>
+                                    <td>
+                                        <input type="text" name='adresse0' placeholder='Adresse' value="123 rue des bourguignons 92270 Bois Colombes" id="add" class="form-control" disabled/>
+                                    </td>
+                                </tr>
+                                <tr id='add2'>
+                                    <th class="text-center">
+                                        Numero téléphone
+                                    </th>
+                                    <td>
+                                        <input type="text" name='num0' placeholder='Numéro de téléphone' value="0130250395" onblur="verifTel(this)" id="tel" class="form-control" disabled/>
+                                    </td>
+                                </tr>
+                                <tr id='add3'>
+                                    <th class="text-center">
+                                        Adresse Mail
+                                    </th>
+                                    <td>
+                                        <input type="text" name='adresseMail0' placeholder='Adresse Mail' value="eric.dupont@mail.net" onblur="verifMail(this)" id="mail" class="form-control" disabled/>
+                                    </td>
+                                </tr>
+                                <tr id='add4'>
+                                    <th class="text-center">
+                                        Droits
+                                    </th>
+                                    <td>
+                                        <input type="text" name='droits0' placeholder='Droits' value="1600 €" id="droit" class="form-control" disabled/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </form>
+            <a id='save_info' class="pull-right btn btn-default">Sauvegarder</a>
+            <a id='edit_info' class="pull-left btn btn-default">Editer</a>
+        </div>
+    </div>
+    <div class="row ">
+        <hr><h4 id="droit">INFORMATION AYANT DROITS</h4><hr>
+        <div class="col-md-12 column">
+            <table class="table table-bordered table-hover" id="tab2">
+                <thead>
+                    <tr >
+                        <th class="text-center">
+                            Nom
+                        </th>
+                        <th class="text-center">
+                            Prenom
+                        </th>
+                        <th class="text-center">
+                            Date naissance
+                        </th>
+                        <th class="text-center">
+                            Lien
+                        </th>
+                        <th class="text-center">
+                            Droit
+                        </th>
+                        <th class="text-center">
+                            Bouton
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id='addr0'>
+                        <td>
+                            <input type="text" id="laa" name='nom0' placeholder='Nom' class="form-control" value="Dupont" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='prenom0' placeholder='Prenom' class="form-control" value="Edouard" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='dateNaiss0' placeholder='Date de naissance' value="10/10/2003" class="form-control" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='lien0' placeholder='Lien' class="form-control" value="Enfant" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='droit0' placeholder='Droit' class="form-control" value="1100 €" disabled/>
+                        </td>
+                        <td>
+                            <a onclick="supp_row('addr0')" class="btn btn-primary btn-primary addr0 addrr">Supprimer</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a id="add_row" class="btn btn-default pull-left">Add Row</a>
+            <a id='delete_row' class="pull-right btn btn-default">Delete Row</a>
+            <a id='edit_droit' class="pull-left btn btn-default">Editer</a>
+            <a id="save_droit" class="btn btn-default pull-right">Sauvegarder</a>
+        </div>
+    </div>
+    <!-- <div id="rib" class="alert alert-white" role="alert"><center><strong>INFORMATION BANCAIRE ET JUSTIFICATIFS</strong></center></div> -->
+    <div class="row">
+        <hr><h4 id="rib">INFORMATION BANCAIRE ET JUSTIFICATIFS</h4><hr>
+        <center><h3>RIB</h3></center>
+        <div class="col-md-12 column">
+            <table class="table table-bordered table-hover" id="tab3">
+                <thead>
+                    <tr >
+                        <th colspan="8" class="text-center">
+                            RIB - releve d'identite bancaire
+                        </th>
+                        <th class="text-center">
+                            Domiciliation
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id=''>
+                        <td colspan="2" class="text-center">
+                            <label>Etablissement</label>
+                            <input type="text" style="text-align: center;" value="20041" class="form-control" disabled/>
+                        </td>
+                        <td colspan="2" class="text-center">
+                            <label>Guichet</label>
+                            <input type="text" style="text-align: center;" value="00001" class="form-control" disabled/>
+                        </td>
+                        <td colspan="2" class="text-center">
+                            <label>Numero de compte</label>
+                            <input type="text" style="text-align: center;" value="64967334Y02" class="form-control" disabled/>
+                        </td>
+                        <td colspan="2" class="text-center">
+                            <label>Clé RIB</label>
+                            <input type="text" style="text-align: center;" value="02" class="form-control" disabled/>
+                        </td>
+                        <td class="text-center"><br>
+                            <input type="text" style="text-align: center;" value="LA BANQUE POSTALE CENTRE FINANCIER 75009 PARIS CEDEX 15" class="form-control" disabled/>
+                        </td>
+                    </tr>
+                    <tr >
+                        <td colspan="8" style="font-weight: bold;" class="text-center">
+                            IBAN - Identifiant international de compte 
+                        </td>
+                        <td colspan="2" style="font-weight: bold;" class="text-center">
+                            BIC - Identifiant international de l'établissement 
+                        </td>
+                    </tr>
+                    <tr id=''>
+                        <td class="text-center">
+                            <input type="text" value="FR65" style="text-align: center;" class="form-control" disabled/>
+                        </td>
+                        <td class="text-center">
+                            <input type="text" value="2004" style="text-align: center;" class="form-control" disabled/>
+                        </td>
+                        <td class="text-center">
+                            <input type="text" value="1000" style="text-align: center;" class="form-control" disabled/>
+                        </td>
+                        <td class="text-center">
+                            <input type="text" value="0164" style="text-align: center;" class="form-control" disabled/>
+                        </td>
+                        <td class="text-center">
+                            <input type="text" value="9673" style="text-align: center;" class="form-control" disabled/>
+                        </td>
+                        <td class="text-center">
+                            <input type="text" value="4Y02" style="text-align: center;" class="form-control" disabled/>
+                        </td>
+                        <td class="text-center">
+                            <input type="text" value="40" style="text-align: center;" class="form-control" disabled/>
+                        </td>
+                        <td colspan="4" class="text-center">
+                            <input type="text" value="PSSTFRPPPAR" style="text-align: center;" class="form-control" disabled/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="10" class="text-center">
+                            <label>Titulaire du compte</label>
+                            <input type="text" value="PSSTFRPPPAR" style="text-align: center;" class="form-control" disabled/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a id='save_rib' class="pull-right btn btn-default">Sauvegarder</a>
+            <a id='edit_rib' class="pull-left btn btn-default">Editer</a>
+        </div>
+    </div>
+    <div class="row">
+   <hr><center><h3>JUSTIFICATIF</h3></center>
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <div class="form-group">
+              <form onsubmit="this.action = document.getElementById('filename').value">
+                <select class="form-control" id="filename">
+                    <option value="files/acte-contrat.pdf">Acte de naissance/Contrat de mariage</option>
+                    <option value="files/passeport-ci.pdf">Passeports et cartes d’identité pour les voyages organisés</option>
+                    <option value="files/facture.pdf">Factures</option>
+                </select>
+                <br>
+                
+                <input type="submit" value="Télécharger" class="pull-right btn btn-default">
+            </form>
+        </div>
+    </div>
+</div>
+<div class="row">
+   <hr><h4 id="demande">AVANCEMENT DE DEMANDE</h4><hr>
+<ul class="list-group">
+  <li class="list-group-item list-group-item-success">Demande #234 | Statut <strong>Accepté</strong></li>
+  <li class="list-group-item list-group-item-success">Demande #267 | Statut <strong>Accepté</strong></li>
+  <li class="list-group-item list-group-item-success">Demande #298 | Statut <strong>Accepté</strong></li>
+  <li class="list-group-item list-group-item-warning">Demande #345 | Statut <strong>En Attente</strong></li>
+  <li class="list-group-item list-group-item-success">Demande #346 | Statut <strong>Accepté</strong></li>
+  <li class="list-group-item list-group-item-danger">Demande #478 | Statut <strong>Refusé</strong></li>
+</ul>
+</div>
+<footer> <!-----------------------------------------------------FOOTER----------------------------------------------- -->
+  <div id="footer" data-animate="fadeInUp">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6">
+          <h4>Pages</h4>
+
+          <ul>
+            <li><a href="apropos.html">A propos de nous</a>
+            </li>
+            <li><a href="contact.html">Nous contacter</a>
+            </li>
+          </ul>
+          <hr class="hidden-md hidden-lg hidden-sm">
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <h4>Ou nous trouver ?</h4>
+
+          <p>
+            <br>10 Boulevard Malesherbes
+            <br>75008
+            <br>Paris
+            <br>France
+            <br>
+            <a href="https://goo.gl/maps/2bLJBn5fSxm">Map</a>
+          </p>
+          <hr class="hidden-md hidden-lg">
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <h4>Abonnez vous à notre newsletter</h4>
+
+          <p class="text-muted">Recever des mails concernant les promotions.</p>
+          <form>
+            <div class="input-group">
+              <input type="text" class="form-control">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Abonnez vous!</button>
+              </span>
+            </div>
+          </form>
+          <hr>
+          <h4>Suivez-nous !</h4>
+
+          <p class="social">
+            <a href="http://facebook.fr"><img id="no_filter" src="img/icone/facebook.png"> </a>
+            <a href="http://twitter.fr"><img id="no_filter" src="img/icone/twitter.png"> </a>
+            <a href="http://instagram.fr"><img id="no_filter" src="img/icone/insta.png"> </a>
+            <a href="http://linkedin.fr"><img id="no_filter" src="img/icone/linkedin.png"> </a>
+            <a href="http://youtube.fr"><img id="no_filter" src="img/icone/youtube.png"> </a>
+            <a href="https://fr.pinterest.com/"><img id="no_filter" src="img/icone/pinterest.png"> </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/styles.js"></script>
+</footer> <!-----------------------------------------------------FIN DU FOOTER----------------------------------------------- -->
+</body>
+</html>

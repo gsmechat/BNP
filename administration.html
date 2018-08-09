@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>BNP</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"> <img id="no_filter" src="img/bnp.png"/>
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">BNP </a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <div class="navbar-form navbar-left co">
+                            <a href="#?w=500" rel="popup_name" class="btn btn-default poplight">Connexion</a>
+                        </div>
+                        <div class="navbar-form navbar-left deconnect" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                            <button type="submit" class="btn btn-default">Recherche</button>
+                        </div>
+                        <li class="deconnect"><a href="#">Notification <span class="badge">14</span></a></li>
+                        <li class="deconnect off"><a href="index.html">Deconnexion</a></li>
+                        <li class="deconnect dropdown compte">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mon compte <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="personnel.html#info">Information</a></li>
+                                <li><a href="personnel.html#droit">Ayant droits</a></li>
+                                <li><a href="personnel.html#rib">RIB</a></li>
+                                <li role="separator" class="divider"></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </nav>
+</header>
+    <div id="popup_name" id="fade" class="popup_block">
+        <center><h2>Connexion</h2></center><br>
+        <img id="no_filter" class="img-responsive" src="img/bnp-pop.jpg">
+        <input type="text" class="form-control" placeholder="Identifiant"><br>
+        <input type="text" class="form-control" placeholder="Mot de passe"><br>
+        <button type="submit" class="pull-right btn btn-default ok">Connexion</button>
+    </div>
+<div class="container">
+</head>
+<body>
+    <div class="row">
+    <span id="drag"><i class="fa fa-arrows-alt fa-3x"></i>
+        <hr><h4 id="info">INFORMATION PERSONNEL</h4><hr>
+        <div class="col-lg-4">
+            <img class="img-responsive adm" src="img/visageadm.jpg" id="no_filter">
+            <img class="img-responsive adm" id="no_filter" src="img/bnp-logo.png">
+        </div>
+        <div class="col-lg-8">
+            <form class="form1" action="#">
+                <div class="row clearfix">
+                    <div class="col-md-12 column">
+                        <table class="table table-bordered table-hover" id="tab1">
+                            <thead>
+                                <tr >
+                                    <th class="text-center">
+                                        Statut
+                                    </th>
+                                    <td>
+                                        <input type="text" name='nom0' placeholder='statut' value="Directeur CE" id="nom" class="form-control" disabled/>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr id='add0'>
+                                    <th class="text-center">
+                                        Prenom
+                                    </th>
+                                    <td>
+                                        <input type="text" name='prenom0' placeholder='Prenom' value="Louis" id="prenom" class="form-control" disabled/>
+                                    </td>
+                                </tr>
+                                <tr id='add0'>
+                                    <th class="text-center">
+                                        Prenom
+                                    </th>
+                                    <td>
+                                        <input type="text" name='prenom0' placeholder='Prenom' value="Louis" id="prenom" class="form-control" disabled/>
+                                    </td>
+                                </tr>
+                                <tr id='add1'>
+                                    <th class="text-center">
+                                        Adresse
+                                    </th>
+                                    <td>
+                                        <input type="text" name='adresse0' placeholder='Adresse' value="43 rue des Allobroges 95100 Argenteuil" id="add" class="form-control" disabled/>
+                                    </td>
+                                </tr>
+                                <tr id='add2'>
+                                    <th class="text-center">
+                                        Numero téléphone
+                                    </th>
+                                    <td>
+                                        <input type="text" name='num0' placeholder='Numéro de téléphone' value="0143240395" onblur="verifTel(this)" id="tel" class="form-control" disabled/>
+                                    </td>
+                                </tr>
+                                <tr id='add3'>
+                                    <th class="text-center">
+                                        Adresse Mail
+                                    </th>
+                                    <td>
+                                        <input type="text" name='adresseMail0' placeholder='Adresse Mail' value="louis.duval@mail.net" onblur="verifMail(this)" id="mail" class="form-control" disabled/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </form>
+            <a id='save_info' class="pull-right btn btn-default">Sauvegarder</a>
+            <a id='edit_info' class="pull-left btn btn-default">Editer</a>
+        </div>
+    </div>
+</span>
+<br>
+<span id="drag1"><i class="fa fa-arrows-alt fa-3x"></i>
+    <div class="row">
+        <hr><h4 id="info">INFORMATION DU PERSONNEL</h4><hr>
+        <table class="table table-bordered table-hover" id="tab2">
+                <thead>
+                    <tr >
+                        <th class="text-center">
+                            Nom
+                        </th>
+                        <th class="text-center">
+                            Prenom
+                        </th>
+                        <th class="text-center">
+                            Droits
+                        </th>
+                        <th class="text-center">
+                            Statut
+                        </th>
+                        <th class="text-center">
+                            Informations
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="text" name='nom0' placeholder='Nom' class="form-control" value="Dupont" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='prenom0' placeholder='Prenom' class="form-control" value="Edouard" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='droit0' placeholder='droit' class="form-control" value="1600 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='statut0' placeholder='droit' class="form-control" value="Banquier" disabled/>
+                        </td>
+                        <td>
+                            <center><a href="personnel.html" class="btn btn-primary btn-primary addr0 addrr">Editer</a></center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" name='nom1' placeholder='Nom' class="form-control" value="Camut" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='prenom1' placeholder='Prenom' class="form-control" value="Giselle" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='droit1' placeholder='droit' class="form-control" value="1200 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='statut1' placeholder='droit' class="form-control" value="Banquier" disabled/>
+                        </td>
+                        <td>
+                            <center><a href="personnel.html" class="btn btn-primary btn-primary addr0 addrr">Editer</a></center>
+                        </td>
+                    </tr>
+                     <tr class="suite_perso fondu1_1" >
+                        <td>
+                            <input type="text" name='nom2' placeholder='Nom' class="form-control" value="Yiung" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='prenom2' placeholder='Prenom' class="form-control" value="Franc" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='droit2' placeholder='droit' class="form-control" value="1000 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='statut2' placeholder='droit' class="form-control" value="Comptable" disabled/>
+                        </td>
+                        <td>
+                            <center><a href="personnel.html" class="btn btn-primary btn-primary addr0 addrr">Editer</a></center>
+                        </td>
+                    </tr>
+                    <tr class="suite_perso fondu1_2" >
+                        <td>
+                            <input type="text" name='nom2' placeholder='Nom' class="form-control" value="Yiung" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='prenom2' placeholder='Prenom' class="form-control" value="Franc" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='droit2' placeholder='droit' class="form-control" value="1000 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='statut2' placeholder='droit' class="form-control" value="Comptable" disabled/>
+                        </td>
+                        <td>
+                            <center><a href="personnel.html" class="btn btn-primary btn-primary addr0 addrr">Editer</a></center>
+                        </td>
+                    </tr>
+                    <tr class="suite_perso fondu1_3">
+                        <td>
+                            <input type="text" name='nom2' placeholder='Nom' class="form-control" value="Yiung" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='prenom2' placeholder='Prenom' class="form-control" value="Franc" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='droit2' placeholder='droit' class="form-control" value="1000 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='statut2' placeholder='droit' class="form-control" value="Comptable" disabled/>
+                        </td>
+                        <td>
+                            <center><a href="personnel.html" class="btn btn-primary btn-primary addr0 addrr">Editer</a></center>
+                        </td>
+                    </tr>
+                    <tr class="suite_perso fondu1_4">
+                        <td>
+                            <input type="text" name='nom2' placeholder='Nom' class="form-control" value="Yiung" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='prenom2' placeholder='Prenom' class="form-control" value="Franc" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='droit2' placeholder='droit' class="form-control" value="1000 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='statut2' placeholder='droit' class="form-control" value="Comptable" disabled/>
+                        </td>
+                        <td>
+                            <center><a href="personnel.html" class="btn btn-primary btn-primary addr0 addrr">Editer</a></center>
+                        </td>
+                    </tr>
+                    <tr class="suite_perso fondu1_5">
+                        <td>
+                            <input type="text" name='nom2' placeholder='Nom' class="form-control" value="Yiung" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='prenom2' placeholder='Prenom' class="form-control" value="Franc" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='droit2' placeholder='droit' class="form-control" value="1000 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='statut2' placeholder='droit' class="form-control" value="Comptable" disabled/>
+                        </td>
+                        <td>
+                            <center><a href="personnel.html" class="btn btn-primary btn-primary addr0 addrr">Editer</a></center>
+                        </td>
+                    </tr>
+                    <tr class="suite_perso fondu1_6">
+                        <td>
+                            <input type="text" name='nom2' placeholder='Nom' class="form-control" value="Yiung" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='prenom2' placeholder='Prenom' class="form-control" value="Franc" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='droit2' placeholder='droit' class="form-control" value="1000 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='statut2' placeholder='droit' class="form-control" value="Comptable" disabled/>
+                        </td>
+                        <td>
+                            <center><a href="personnel.html" class="btn btn-primary btn-primary addr0 addrr">Editer</a></center>
+                        </td>
+                    </tr>
+                    <tr class="suite_perso fondu1_7">
+                        <td>
+                            <input type="text" name='nom2' placeholder='Nom' class="form-control" value="Yiung" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='prenom2' placeholder='Prenom' class="form-control" value="Franc" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='droit2' placeholder='droit' class="form-control" value="1000 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='statut2' placeholder='droit' class="form-control" value="Comptable" disabled/>
+                        </td>
+                        <td>
+                            <center><a href="personnel.html" class="btn btn-primary btn-primary addr0 addrr">Editer</a></center>
+                        </td>
+                    </tr>
+                    <tr class="suite_perso fondu1_8">
+                        <td>
+                            <input type="text" name='nom3' placeholder='Nom' class="form-control" value="Amard" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='prenom3' placeholder='Prenom' class="form-control" value="Kader" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='droit3' placeholder='droit' class="form-control" value="800 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='statut3' placeholder='droit' class="form-control" value="Standardiste" disabled/>
+                        </td>
+                        <td>
+                            <center><a href="personnel.html" class="btn btn-primary btn-primary addr0 addrr">Editer</a></center>
+                        </td>
+                    </tr>
+                     <tr class="suite_perso fondu1_9">
+                        <td>
+                            <input type="text" name='nom3' placeholder='Nom' class="form-control" value="Amard" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='prenom3' placeholder='Prenom' class="form-control" value="Kader" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='droit3' placeholder='droit' class="form-control" value="800 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='statut3' placeholder='droit' class="form-control" value="Standardiste" disabled/>
+                        </td>
+                        <td>
+                            <center><a href="personnel.html" class="btn btn-primary btn-primary addr0 addrr">Editer</a></center>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <center><strong><p class="indic">Cliquez pour voir la suite<p></strong></center>
+            <center><button id="suite_info_clik">\/<strong></strong></button></center>
+    </div>
+</span>
+    <div class="row">
+    <span id="drag2"><i class="fa fa-arrows-alt fa-3x"></i>
+        <hr><h4 id="info">DEMANDE DU PERSONNEL</h4><hr>
+        <table class="table table-bordered table-hover" id="tab2">
+                <thead>
+                    <tr >
+                        <th class="text-center">
+                            Nom
+                        </th>
+                        <th class="text-center">
+                            Prenom
+                        </th>
+                        <th class="text-center">
+                            Référence
+                        </th>
+                        <th class="text-center">
+                            Quantité
+                        </th>
+                        <th class="text-center">
+                            Coût
+                        </th>
+                        <th class="text-center">
+                            Reste droit
+                        </th>
+                        <th class="text-center">
+                            Total demande
+                        </th>
+                        <th class="text-center">
+                            Validation
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="text" name='nom0' class="form-control" value="Dupont" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='prenom0' class="form-control" value="Edouard" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='ref0' class="form-control" value="Star Wars" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='qte0' class="form-control" value="5" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='val0' class="form-control" value="5 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='reste_droit0' class="form-control" value="1600 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='td0' class="form-control" value="25 €" disabled/>
+                        </td>
+                        <td>
+                            <center><a href="#" class="btn btn-primary">Validé</a></center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" name='nom1' class="form-control" value="Camut" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='prenom1' class="form-control" value="Julien" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='ref1' class="form-control" value="Ouzbékistan" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='qte1' class="form-control" value="4" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='val1' class="form-control" value="550 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='reste_droit1' class="form-control" value="1300 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='td1' class="form-control" value="2200 €" disabled/>
+                        </td>
+                        <td>
+                            <center><a href="#" class="btn btn-primary" disabled>Validé</a></center>
+                        </td>
+                    </tr>
+                    <tr class="suite_demande fondu2_1">
+                        <td>
+                            <input type="text" name='nom1' class="form-control" value="Camut" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='prenom1' class="form-control" value="Julien" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='ref1' class="form-control" value="Ouzbékistan" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='qte1' class="form-control" value="4" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='val1' class="form-control" value="550 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='reste_droit1' class="form-control" value="1300 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='td1' class="form-control" value="2200 €" disabled/>
+                        </td>
+                        <td>
+                            <center><a href="personnel.html" class="btn btn-primary" disabled>Validé</a></center>
+                        </td>
+                    </tr>
+                    <tr class="suite_demande fondu2_2">
+                        <td>
+                            <input type="text" name='nom1' class="form-control" value="Camut" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='prenom1' class="form-control" value="Julien" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='ref1' class="form-control" value="Ouzbékistan" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='qte1' class="form-control" value="4" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='val1' class="form-control" value="550 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='reste_droit1' class="form-control" value="1300 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='td1' class="form-control" value="2200 €" disabled/>
+                        </td>
+                        <td>
+                            <center><a href="personnel.html" class="btn btn-primary" disabled>Validé</a></center>
+                        </td>
+                    </tr>
+                    <tr class="suite_demande fondu2_3">
+                        <td>
+                            <input type="text" name='nom1' class="form-control" value="Camut" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='prenom1' class="form-control" value="Julien" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='ref1' class="form-control" value="Ouzbékistan" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='qte1' class="form-control" value="4" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='val1' class="form-control" value="550 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='reste_droit1' class="form-control" value="1300 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='td1' class="form-control" value="2200 €" disabled/>
+                        </td>
+                        <td>
+                            <center><a href="personnel.html" class="btn btn-primary" disabled>Validé</a></center>
+                        </td>
+                    </tr>
+                    <tr class="suite_demande fondu2_4">
+                        <td>
+                            <input type="text" name='nom1' class="form-control" value="Camut" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='prenom1' class="form-control" value="Julien" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='ref1' class="form-control" value="Ouzbékistan" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='qte1' class="form-control" value="4" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='val1' class="form-control" value="550 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='reste_droit1' class="form-control" value="1300 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='td1' class="form-control" value="2200 €" disabled/>
+                        </td>
+                        <td>
+                            <center><a href="personnel.html" class="btn btn-primary" disabled>Validé</a></center>
+                        </td>
+                    </tr>
+                    <tr class="suite_demande fondu2_5">
+                        <td>
+                            <input type="text" name='nom1' class="form-control" value="Camut" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='prenom1' class="form-control" value="Julien" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='ref1' class="form-control" value="Ouzbékistan" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='qte1' class="form-control" value="4" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='val1' class="form-control" value="550 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='reste_droit1' class="form-control" value="1300 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='td1' class="form-control" value="2200 €" disabled/>
+                        </td>
+                        <td>
+                            <center><a href="personnel.html" class="btn btn-primary" disabled>Validé</a></center>
+                        </td>
+                    </tr>
+                    <tr class="suite_demande fondu2_6">
+                        <td>
+                            <input type="text" name='nom1' class="form-control" value="Camut" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='prenom1' class="form-control" value="Julien" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='ref1' class="form-control" value="Ouzbékistan" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='qte1' class="form-control" value="4" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='val1' class="form-control" value="550 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='reste_droit1' class="form-control" value="1300 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='td1' class="form-control" value="2200 €" disabled/>
+                        </td>
+                        <td>
+                            <center><a href="personnel.html" class="btn btn-primary" disabled>Validé</a></center>
+                        </td>
+                    </tr>
+                    <tr class="suite_demande fondu2_7">
+                        <td>
+                            <input type="text" name='nom1' class="form-control" value="Camut" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='prenom1' class="form-control" value="Julien" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='ref1' class="form-control" value="Ouzbékistan" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='qte1' class="form-control" value="4" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='val1' class="form-control" value="550 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='reste_droit1' class="form-control" value="1300 €" disabled/>
+                        </td>
+                        <td>
+                            <input type="text" name='td1' class="form-control" value="2200 €" disabled/>
+                        </td>
+                        <td>
+                            <center><a href="personnel.html" class="btn btn-primary" disabled>Validé</a></center>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <center><strong><p class="indic_demande">Cliquez pour voir la suite<p></strong></center>
+            <center><button id="suite_demande_clik">\/<strong></strong></button></center><br>
+    </div>
+    </span>
+</div>
+
+<footer> <!-----------------------------------------------------FOOTER----------------------------------------------- -->
+  <div id="footer" data-animate="fadeInUp">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6">
+          <h4>Pages</h4>
+
+          <ul>
+            <li><a href="apropos.html">A propos de nous</a>
+            </li>
+            <li><a href="contact.html">Nous contacter</a>
+            </li>
+          </ul>
+          <hr class="hidden-md hidden-lg hidden-sm">
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <h4>Ou nous trouver ?</h4>
+
+          <p>
+            <br>10 Boulevard Malesherbes
+            <br>75008
+            <br>Paris
+            <br>France
+            <br>
+            <a href="https://goo.gl/maps/2bLJBn5fSxm">Map</a>
+          </p>
+          <hr class="hidden-md hidden-lg">
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <h4>Abonnez vous à notre newsletter</h4>
+
+          <p class="text-muted">Recever des mails concernant les promotions.</p>
+          <form>
+            <div class="input-group">
+              <input type="text" class="form-control">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Abonnez vous!</button>
+              </span>
+            </div>
+          </form>
+          <hr>
+          <h4>Suivez-nous !</h4>
+
+          <p class="social">
+            <a href="http://facebook.fr"><img id="no_filter" src="img/icone/facebook.png"> </a>
+            <a href="http://twitter.fr"><img id="no_filter" src="img/icone/twitter.png"> </a>
+            <a href="http://instagram.fr"><img id="no_filter" src="img/icone/insta.png"> </a>
+            <a href="http://linkedin.fr"><img id="no_filter" src="img/icone/linkedin.png"> </a>
+            <a href="http://youtube.fr"><img id="no_filter" src="img/icone/youtube.png"> </a>
+            <a href="https://fr.pinterest.com/"><img id="no_filter" src="img/icone/pinterest.png"> </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/styles.js"></script>
+</footer> <!-----------------------------------------------------FIN DU FOOTER----------------------------------------------- -->
+</body>
+</html>
